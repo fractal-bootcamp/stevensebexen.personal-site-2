@@ -18,7 +18,7 @@
 
   #stripe1, #stripe2, #stripe3 {
     cursor: pointer;
-    transition: filter 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
   }
 
   #stripe1 {
@@ -86,13 +86,10 @@ preserveAspectRatio='none'
        y="19.695581"
        transform="rotate(-12.110725)"
        clip-path="url(#clipPath17)" /><path
-       style="fill:#757575;fill-opacity:1;stroke-width:0.793999;stroke-linecap:round;stroke-miterlimit:10"
        d="M 0,123.15504 C 74.992532,69.343233 160.39904,163.84976 238.09976,0 h 100.5669 V 190.5 H 0 Z"
        id="stripe2" /><path
-       style="fill:#4e4e4e;fill-opacity:1;stroke-width:0.793999;stroke-linecap:round;stroke-miterlimit:10"
        d="M 38.552885,190.5 C 140.27857,91.131745 250.92853,178.80168 277.3333,0 h 61.33337 l -1e-5,190.5"
        id="stripe3" /><path
-       style="fill:#000000;fill-opacity:1;stroke-width:0.793999;stroke-linecap:round;stroke-miterlimit:10"
        d="m 199.1899,190.5 c 37.27358,-56.65866 119.79864,-16.30183 139.47676,-75.55529 V 190.5 Z"
        id="bottom" /></g><g
      id="layer2"
