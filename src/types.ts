@@ -1,3 +1,4 @@
 export const enum AppView {
-  Home
+  Home,
+  Navigation
 };

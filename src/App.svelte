@@ -5,22 +5,27 @@
 <script lang="ts">
     import { AppView } from "./types";
     import HomeView from "./views/home/HomeView.svelte";
+    import NavigationView from "./views/navigation/NavigationView.svelte";
   let view: AppView = AppView.Home;
-  $: currentView = {
-    [AppView.Home]: HomeView
-  }[view];
+  const viewComponents = {
+    [AppView.Home]: HomeView,
+    [AppView.Navigation]: NavigationView
+  };
+  $: viewComponent = viewComponents[view]
 
+  function changeView(e: CustomEvent<AppView>) {
+    view = e.detail;
+  }
 </script>
 
 <main>
-  <svelte:component this={currentView} />
+  <svelte:component this={viewComponent} on:changeview={changeView} />
 </main>
 
 <style>
   main {
     display: flex;
     align-self: stretch;
-    align-items: stretch;
     flex: 1 1 0px;
   }
 

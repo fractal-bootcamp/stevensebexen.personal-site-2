@@ -1,9 +1,17 @@
-<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<script lang="ts">
+    import { createEventDispatcher } from "svelte";
+    import { AppView } from "../../types";
+
+  const dispatcher = createEventDispatcher<{changeview: AppView}>();
+  function selected() {
+    dispatcher('changeview', AppView.Navigation);
+  }
+</script>
 
 <style>
   svg {
     flex: 1 1 0px;
-    align-self: stretch;
+    
   }
 
   #lower {
@@ -12,7 +20,9 @@
     cursor: pointer;
   }
 
-  #lower:hover {
+  #lower:hover, #lower:focus {
+    border: none;
+    outline: none;
     fill: #e54e60;
   }
 
@@ -43,7 +53,8 @@
        y="0" />
     <path
        d="m 51.997845,190.5 c 5.776683,-35.86786 44.259065,-43.59431 55.531685,-46.62247 18.55894,-4.98549 24.73683,17.16434 -7.06768,22.21267 64.11385,0.50483 77.23952,-28.27067 77.23952,-28.27067 91.96005,-0.49727 138.71932,-43.947563 160.96529,-90.87002 V 190.5 Z"
-       id="lower" />
+       id="lower"
+       on:click={selected} on:keypress={e => {if (e.key === 'Enter') selected()}} role='button' tabindex="0" />
     <path
        d="M 51.997845,190.5 C -45.308363,114.2904 18.319707,39.989487 91.24847,34.519841 119.25804,32.419127 159.8479,23.56591 168.61437,16.15467 c 0,31.299674 -39.37701,62.094514 -39.37701,62.094514 C 204.45754,74.210516 257.46505,0 257.46505,0 H 0 v 190.5 z"
        id="upper" />
