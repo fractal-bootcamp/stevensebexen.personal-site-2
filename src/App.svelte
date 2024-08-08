@@ -5,7 +5,6 @@
 <script lang="ts">
     import { AppView } from "./types";
     import HomeView from "./views/home/HomeView.svelte";
-     from "./views/home/HomeView.svelte";
   let view: AppView = AppView.Home;
   $: currentView = {
     [AppView.Home]: HomeView
