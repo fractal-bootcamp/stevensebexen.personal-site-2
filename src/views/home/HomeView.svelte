@@ -1,9 +1,9 @@
 <script lang='ts'>
-    import Svg from '../../assets/svg/Title.svelte';
+    import Title from './Title.svelte';
 </script>
 
 <div id='view-home'>
-  <Svg />
+  <Title on:changeview />
   <p id='name'>Steven Sebexen</p>
   <div id='next'>This is the point at which words fail to convey the meaning to which they were assigned.</div>
 </div>
@@ -12,7 +12,6 @@
   #view-home {
     display: flex;
     position: relative;
-    align-items: stretch;
     flex: 1 1 0px;
   }
 
